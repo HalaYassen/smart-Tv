@@ -26,7 +26,27 @@ else
     alert('you must choose again!!!')
 }
 document.write('<h2>','last modified today by hala','</h2>');*/
-var yourOrder =prompt("what do you want to buy?? please selesct 1-tv 2-phone 3-laptop");
+function Message() {
+    var mess='';
+    var itt = prompt('what item you want ?');
+
+    if (itt=='tv') {
+        message = 'hello in tv page';
+
+    } else if (itt =='phone') {
+        message = 'hello in phone page';
+    } else if (itt== 'laptop') {
+        message = 'hello in laptop page';
+    } else {
+        mess = 'you must choose at least one item'
+    }
+    return document.write('<h3>' + message + '</h3>');
+}
+Message();
+
+function getItem()
+{
+    var yourOrder =prompt("what do you want to buy?? please selesct 1-tv 2-phone 3-laptop");
 while(yourOrder!=='tv'&& yourOrder!=='phone'&&yourOrder!=='laptop')
 {
     yourOrder=prompt("please select tv or phone or laptop only");
@@ -52,10 +72,12 @@ else if (yourOrder=='laptop')
     var result='';
     //result =yourItem;
    
-    var numOfItem=prompt("how mant items do you want to buy?!");
+    var numOfItem=prompt("how many items do you want to buy?!");
     for(var i=0;i<numOfItem;i++)
     {
         document.write(yourItem);
     }
-     
+}
+getItem();
+
    
